@@ -16,6 +16,6 @@ for i in range(5):
         break
         
     print("Executed ", i)
-    time.sleep(5*i+1)
+    time.sleep(5)
     
 
