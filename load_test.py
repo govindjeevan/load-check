@@ -13,3 +13,5 @@ resp = requests.get(URL, headers=headers)
 
 if resp.status_code==503:
     requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
+
+print("Executed")
