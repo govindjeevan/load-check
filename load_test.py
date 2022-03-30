@@ -11,7 +11,7 @@ headers = ast.literal_eval(HEADERS)
 for i in range(5):
     resp = requests.get(URL, headers=headers)
 
-    if resp.status_code==503:
+    if resp.status_code==503 or "organization" in str(resp.content) or "organisation" in str(resp.content):
         requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
         break
         
