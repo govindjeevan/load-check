@@ -6,7 +6,7 @@ import time
 IFFTT_KEY = os.environ.get('IFFTT_KEY')
 URL =  os.environ.get('URL')
 HEADERS = os.environ.get('HEADERS')
-headers = ast.literal_eval(str(HEADERS))
+headers = ast.literal_eval(HEADERS)
 
 for i in range(5):
     resp = requests.get(URL, headers=headers)
