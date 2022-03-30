@@ -18,4 +18,5 @@ jobs:
       - name: execute load test
         env: 
           IFFTT_KEY: ${{ secrets.IFFTT_KEY }}
+          URL: ${{ secrets.URL }}
         run: python load_test.py
