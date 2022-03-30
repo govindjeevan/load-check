@@ -5,7 +5,9 @@ import os
 
 IFFTT_KEY = os.environ.get('IFFTT_KEY')
 URL =  os.environ.get('URL')
-headers = ast.literal_eval(os.environ.get('HEADERS'))
+HEADERS = os.environ.get('HEADERS')
+print(HEADERS)
+headers = ast.literal_eval(str(HEADERS))
 
 resp = requests.get(URL, headers=headers)
 
