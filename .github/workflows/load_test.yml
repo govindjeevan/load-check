@@ -19,9 +19,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-          
       - name: execute load test
         env: 
           IFFTT_KEY: ${{ secrets.IFFTT_KEY }}
           URL: ${{ secrets.URL }}
+          HEADERS: ${{ secrets.HEADERS }}
         run: python load_test.py
