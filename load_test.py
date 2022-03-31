@@ -14,7 +14,6 @@ for i in range(5):
     if resp.status_code==503 or "organization" in str(resp.content) or "organisation" in str(resp.content):
         requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
         break
-    requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
     print("Executed ", resp.status_code)
     time.sleep(5)
     
