@@ -15,7 +15,7 @@ for i in range(5):
         requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
         break
         
-    print("Executed ", i)
+    print("Executed ", resp.status_code)
     time.sleep(5)
     
 
