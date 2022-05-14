@@ -8,13 +8,14 @@ URL =  os.environ.get('URL')
 HEADERS = os.environ.get('HEADERS')
 headers = ast.literal_eval(HEADERS)
 
-for i in range(5):
-    resp = requests.get(URL, headers=headers)
+for j in range(5):
+    for i in range(5):
+        resp = requests.get(URL, headers=headers)
 
-    if resp.status_code==503 or "organization" in str(resp.content) or "organisation" in str(resp.content):
-        requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
-        break
-    print("Executed ", resp.status_code)
-    time.sleep(5)
-    
+        if resp.status_code==503 or "organization" in str(resp.content) or "organisation" in str(resp.content):
+            requests.get("https://maker.ifttt.com/trigger/VisaLoad/with/key/"+IFFTT_KEY)
+            break
+        print("Executed ", resp.status_code)
+        time.sleep(5)
+    time.sleep(60) 
 
